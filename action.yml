@@ -1,0 +1,19 @@
+name: 'GCP Pub/Sub Delete Topic'
+description: 'Delete Google Cloud Pub/Sub topics'
+author: 'predictr-io'
+
+branding:
+  icon: 'trash-2'
+  color: 'red'
+
+inputs:
+  project-id:
+    description: 'GCP project ID'
+    required: true
+  topic-name:
+    description: 'Pub/Sub topic name (not the full path, just the topic name)'
+    required: true
+
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
